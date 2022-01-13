@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+ <meta charset="UTF-8">
+ <!-- ページタイトル -->
+ <title>オリジナルマップの作成</title>
+ <!-- leaflet.css -->
+ <link rel="stylesheet" href="https://unpkg.com/leaflet@1.3.1/dist/leaflet.css" />
+ <!-- leaflet.js -->
+ <script src="https://unpkg.com/leaflet@1.3.1/dist/leaflet.js"></script>
+ <link rel="stylesheet" href="css/map.css">
+</head>
+
+<body>
+
+<font size="10">ホテルの場所　</font>
+     <a href=map1.html><button class="Button-style13"><b>観光場所</b></button></a>
+     <a href="settei.html"class="btn-circle-stitch"style="position:absolute; top:9px; width="100%"><img src="settei.png"alt="設定イラスト"width="100%"></img></a>
+<br></br>
+
+ <!-- 地図を表示するブロック要素 -->
+
+<div id="mymap"  style="width:device-width;height:1500px;"></div>
+ 
+ <script>
+ 
+   /* 緯度・経度と倍率の指定 */
+   var mymap = L.map("mymap").setView([35.104008950388184, 139.0778948265216], 13);
+ 
+   /* 地図タイルとクレジット表示 */
+   L.tileLayer("http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+       {
+         attribution: "&copy; <a href='http://osm.org/copyright'>OpenStreetMap</a> contributors"
+       }
+   ).addTo(mymap);
+ 
+  /* マーカー表示 */
+   data = {
+       "type": "FeatureCollection",
+       "features": [
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.078023, 35.104087]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海駅<br>ペット情報　ペット同伴可<br>キャリーケースに<br>入れてください。</br></font>",
+                   }
+           },
+               {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.083786, 35.044872]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>網代観光ホテル<br>電話番号　0557-68-2345<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型犬（６㎏以内）で<br>自宅室内で飼っている<br>・夜鳴き、遠吠えをしない<br>・しつけのできている、<br>　生理中ではない<br> ・1匹まで<br>（2匹の場合には、<br>合計体重が７㎏以下<br>　　　　　に限定）</br>",
+                   }
+           },
+               {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.06842,35.053917 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>南熱海伊豆多賀温泉味と<br>湯の宿　ニューとみよし<br>電話番号　0557-67-0017<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型犬2匹まで<br>・トレーニング済みである<br> ・ワクチン接種<br>しつけ済みである</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075012, 35.095215]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>料理旅館渚館<br>電話番号　0557-81-5054<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型犬3匹まで<br>・無駄吠えをしない、<br>トイレのしつけが<br>　　　　　　できている</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.081635,35.101742 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ＫＫＲホテル熱海<br>電話番号　0557-85-2000<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型犬3匹まで<br>・無駄吠えをしない、<br>トイレのしつけが<br>　　　　　できている</br>",
+                   }
+           },
+            {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.082108,35.045074 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ホテル　大和<br>電話番号　0557-68-0362<br>ペット不可</br>",
+                   }
+           },
+            {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075775, 35.118793]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ラビスタ伊豆山<br>電話番号　0557-80-3666<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型（５㎏以内）で<br>自宅室内で飼っている<br>・夜鳴き、遠吠えをしない<br>・しつけができている<br>・生理中ではない<br>・１匹まで<br>（２匹以上の場合には、<br>合計体重が７ｋｇ以下）</br>",
+                   }
+           },
+            {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.077652,35.102016 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海温泉 湯宿一番地<br>電話番号　0557-81-3651<br>ペット情報<br>犬・猫　同伴可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075867,35.106388 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>四季倶楽部 熱海望洋館<br>電話番号　0557‐81‐6968<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.067444, 35.055073]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>やどかり<br>電話番号　0557-68-1109<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.078094,35.101288 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海聚楽ホテル月の栖<br>電話番号　0557-81-5182<br>ペット情報　同伴可<br>宿泊可能条件<br>・１日１組限定で、<br>ペット宿泊を受け付け<br>・体重６㎏までの小型犬<br>・共用スペースでのマナー<br>無駄吠え等しない</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.074417,35.090557 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海温泉<br>ホテルサンミ倶楽部<br>電話番号　0557-81-8000<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型犬（7～8kg）まで</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.064758,35.096207 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>サンダンス・リゾート熱海<br>電話番号　0557-85-9040<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.077301,35.105976 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ザ グラン リゾート<br>エレガンテ熱海<br>電話番号　0557-81-3334<br>ペット情報　同伴可<br>宿泊可能条件<br>・ペット同伴可能部屋のみ</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.071747,35.096352 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>網代温泉 熱海海老番館<br>電話番号　0557-67-1979<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.072586,35.082706 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ロイヤルウイング<br>電話番号　0557-82-5151<<br>ペット情報　同伴可<br>宿泊可能条件<br>・小型・中型・大型犬可能</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.074951,35.094742 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>リブマックスリゾート<br>熱海シーフロント<br>電話番号0557-83-0010<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.058548,35.101166 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>風雅<br>電話番号　0570-003-141<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.070343,35.106522 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ISHINOYA 熱海 / 石のや 熱海<br>電話番号　050-3803-6751<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.08075,35.104782 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>東横IN熱海駅前<br>電話番号　0557-86-1045<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.080063,35.104641 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>プリンス スマート<br>イン 熱海<br>電話番号　050-3184-1143<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.076309,35.101799 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>伊東園ホテル 熱海館<br>電話番号　0570-020-780<br>ペット不可</br>",
+                   }
+           },
+             {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075516,35.099823 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>貸切温泉のコンドミニアム<br>グランビュー熱海<br>電話番号　0557-85-0051<br>ペット同伴不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075485,35.101067 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ファンシービジネスホテル<br>電話番号　0557-82-6211<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.092484,35.135178 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ニューウェルシティ湯河原<br>電話番号　0465-63-3721<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.073883,35.096642 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ゲストハウス マルヤ<br>電話番号　0557-82-0389<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.080704,35.100517 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ウィスタリアン<br>　　　ライフクラブ 熱海<br>電話番号　0557-82-2053<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.07637,35.089184 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>みのや ホテル<br>電話番号　0557-82-2053<br>ペット報　同伴不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.063995,35.091415 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>かんぽの宿 熱海（本館）<br>電話番号　0557-83-6111<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.061859,35.089615 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>かんぽの宿熱海（別館）<br>電話番号　0557-83-6112<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.064392,35.087967 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海TENSUI<br>電話番号　0570-032-217<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.081955,35.100941 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ホテルリゾーピア 熱海<br>電話番号　0557-83-5959<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.069031,35.096478 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>星野リゾート<br>リゾナーレ熱海<br>電話番号　0570-07-3055<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075485,35.097874 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海温泉 HOTEL MICURAS<br>（ホテルミクラス）<br>電話番号0557-86-1111<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.076019,35.098656 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海シーサイドスパ<br>＆リゾート<br>電話番号　0557-82-8111<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.072678,35.098408 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海市温泉ホテル 夢いろは<br>電話番号　0557-82-1151<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.048859,35.080345 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>森の絶景露天風呂<br>熱海 森の温泉ホテル<br>電話番号　0557-67-8828<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.087753,35.039768 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>時間を旅する宿 海のはな<br>電話番号　0557-67-2978<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.073059,35.099197 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>熱海温泉アタミシーズン<br>　　　　　ホテル<br>電話番号　0570-78-3026<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.083908,35.107628 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ブリーズベイシーサイド<br>　　　リゾート熱海<br>（BBHホテルグループ）<br>電話番号　0557-85-0280<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.077179,35.105335 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>TKPホテル＆リゾート<br>レクトーレ熱海桃山<br>電話番号　050-3803-6539<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.066132,35.092194 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>KPホテル＆リゾート<br>レクトーレ熱海小嵐<br>電話番号　050-3803-6538<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.080521,35.125099 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ゆとりろ熱海<br>電話番号　0570-055-666<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.064362,35.053535 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>いざわ荘<br>電話番号　0557-68-1171<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.075287,35.100952 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>素泊まり宿 瑞宝荘<br>電話番号　0557-81-3215<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.062119,35.103863 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>GLAMDAY VILLA UMITO<br>MORITO KAZE<br>海森風<br>電話番号　0570-011-722><br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.072586,35.082706 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ホテル夢寿庵mujuan<br>電話番号　090-7212-3339<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.081406,35.103519 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ATAMI 海峯楼<br>電話番号　0570-011-722<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.074417,35.093098 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>リブマックスリゾート<br>　　　熱海Ocean<br>電話番号　0557-86-5555<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.072586,35.082706 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ホテルニューアカオ<br>電話番号　0557-82-5151<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.171539,35.040001 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>エクシブ初島クラブ<br>電話番号　0557-67-3000<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.072586,35.082706 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>のんびりリゾート晴空<br>電話番号　0557-81-7644<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.171539,35.040001 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>アイランドヴィラ<br>プレミア<br>電話番号　0557-67-2151<br>ペット不可</br>",
+                   }
+           },
+           {
+               "type": "Feature",
+               "geometry":
+                   {
+                       "type": "Point",
+                       "coordinates": [139.067322,35.095928 ]
+                   },
+               "properties":
+                   {
+                       "name": "<font size=5.5>ふふ熱海<br>別邸「木の間の月」<br>電話番号　0570-0117-22<br>ペット不可</br>",
+                   }
+           },
+       ]
+   }
+ 
+   /* GeoJSONの読込 */
+
+   L.geoJSON(data, {
+     onEachFeature: function(feature, layer){
+       layer.bindPopup("<div style='width:20000px'>" + feature.properties.name + "</div>");
+     }
+   }).addTo(mymap);
+ 
+   /* イベント処理 */
+   var popup = L.popup();
+   function onMapClick(e){
+     popup.setLatLng(e.latlng).setContent(
+       "<p>緯度:" + e.latlng.lat + " 経度:" + e.latlng.lng + "</p>"
+     ).openOn(mymap);
+   }
+   mymap.on("click", onMapClick)
+ </script>
+
+ <body>
+<body bgcolor="#e5ffff">
+
+ <p class="ex1"></p>
+<p>　<a href=home.html><button class="Button-style"><b>ホーム</b></button></a>
+ <a href=pet.html><button class="Button-style1"><b>ペット</b></button></a>
+ <a href=calendar.html><button class="Button-style"><b>カレンダー</b></button></a>
+ <a href=memo.html><button class="Button-style1"><b>メモ</b></button></a></p>
+</body>
+
+</html>

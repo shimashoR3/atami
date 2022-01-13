@@ -1,0 +1,62 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+   <meta charset="utf-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+   <meta http-equiv="Content-Security-Policy" content="default-src * data: gap: content: https://ssl.gstatic.com; style-src * 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'">
+   <script src="components/loader.js"></script>
+   <link rel="stylesheet" href="components/loader.css">
+   <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/test.css"> 
+    <script src="components/caleandar.js"></script>
+</head>
+
+
+
+<div class="wrapper">
+    <!-- xxxx年xx月を表示 -->
+    <h1 id="header"></h1>
+
+<a href="settei.html" class="btn-circle-stitch1"style="position:absolute; top:7px; left:300px"><a href="settei.html"style="position:absolute; top:7px; left:302px"><img src="settei.png"alt="設定イラスト" width="50px" height="50px"></a></a>
+<p class="ex1"></p>
+
+    <!-- ボタンクリックで月移動 -->
+    <div id="next-prev-button">
+        <button id="prev" onclick="prev()">‹</button>
+        <button id="next" onclick="next()">›</button>
+    </div>
+
+       <!-- カレンダー -->
+    <div id="calendar"></div>
+</div>
+<br>
+≪現在のイベント情報≫</br>
+<p>
+<script type="text/javascript"> 
+var myimg = new Array(); 
+myimg[0] = '<img src="1gatu.png" alt="１月" width="100%"height="100%">';
+myimg[1] = '<img src="2gatu.png"２月"width="100%" height="100%">';
+myimg[2] = '<img src="3gatu.png" alt="３月" width="100%"" height="100%">';
+myimg[3] = '<img src="4gatu.png" alt="４月" width="100%" height="100%">';
+myimg[4] = '<img src="5gatu.png" alt="５月" width="100%" height="100%">';
+myimg[5] = '<img src="6gatu.png" alt="６月" width="100%" height="100%">';
+myimg[6] = '<img src="7gatu.png" alt="７月" width="100%" height="100%"';
+myimg[7] = '<img src="8gatu.png" alt="８月"  width="100%" height="100%"">';
+myimg[8] = '<img src="9gatu.png" alt="９月" width="100%" height="100%">';
+myimg[9] = '<img src="10gatu.png" alt="１０月"  width="100%" height="100%">';
+myimg[10] = '<img src="11gatu.png" alt="１１月" width="100%" height="100%">';
+myimg[11] = '<img src="12gatu.png" alt="１２月" width="100%" height="100%">';
+
+var mynow = new Date(); 
+var mymonth = mynow.getMonth(); 
+document.write("<center><img 'src="+myimg[mymonth ]+"</center>");
+</script> </p>
+
+<p>　<a href=home.html><button class="Button-style"><b>ホーム</b></button></a>
+ <a href=pet.html><button class="Button-style1"><b>ペット</b></button></a>
+ <a href=map.html><button class="Button-style"><b>地図</b></button></a>
+ <a href=memo.html><button class="Button-style1"><b>メモ</b></button></a></p>
+<body bgcolor="#e5ffff">
+
+
+</html>

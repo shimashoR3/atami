@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400&display=swap');
+
+* {
+  box-sizing: border-box;
+  outline: none;
+}
+body {
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding-top: 3rem;
+}
+
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #8ad2ee;
+  color: #fff;
+  border: none;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.add:active {
+  transform: scale(0.98);
+}
+
+.note {
+  background-color: #fff;
+  box-shadow: 0 0 10px 4px rgba(0, 0, 0, 0.1);
+  margin: 30px 20px;
+  height: 100%;
+  width: 100%;
+  overflow-y: scroll;
+}
+
+.note .tools {
+  background-color: #8ad2ee;
+  display: flex;
+  justify-content: flex-end;
+  padding: 0.5rem;
+}
+
+.note .tools button {
+  background-color: transparent;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1rem;
+  margin-left: 0.5rem;
+}
+
+.note textarea {
+  outline: none;
+  font-family: inherit;
+  font-size: 1.2rem;
+  border: none;
+  height: 400px;
+  width: 100%;
+  padding: 20px;
+}
+
+.main {
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
+
+.Button-style {
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+.Button-style1{
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #42b7e6;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+
+.btn-circle-stitch {
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 35px;
+  height: 35px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 1px #FFF;
+  transition: .4s;
+}

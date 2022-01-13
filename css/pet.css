@@ -1,0 +1,71 @@
+
+.Button-style {
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+.Button-style1{
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #42b7e6;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+
+.btn-circle-stitch {
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 1px #FFF;
+  transition: .4s;
+}
+
+table{
+  width: 100%;
+}
+
+.btn-circle-stitch3{
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 1px #FFF;
+  transition: .4s;
+}
+
+.Button-style6{
+  font-size: 15px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}

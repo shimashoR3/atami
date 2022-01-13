@@ -1,0 +1,102 @@
+table{
+  width: 100%;
+}
+
+
+/*フォーム全体*/
+#form1{
+position:relative;/*フォームの相対位置*/	
+max-width:270px;/*フォームのサイズ*/
+margin-bottom:15px;/*フォームの下に余白*/	 	
+}
+/*検索ボックス*/
+#sbox{
+position:absolute;/*フォームの絶対位置*/	
+left:0;
+top:0; 	
+outline:0;/*クリック時の青い枠線消す*/	
+height:50px;/*検索ボックスの高さ*/	
+padding:0 10px;/*テキスト位置調整*/	 
+border-radius:2px 0 0 2px;/*検索ボックスの角を丸める*/		
+background:#eee;/*検索ボックスの背景カラー*/		
+}
+/*検索ボタン*/
+#sbtn{
+width:70px;/*検索ボタンの横幅*/ 
+height:50px;/*検索ボタンの縦幅*/ 
+position:absolute;/*検索ボタンの絶対位置*/  
+left:270px;/*検索ボタンの位置調整*/  
+top:0;
+border-radius:0 2px 2px 0;/*検索ボタンの角を丸める*/ 
+background:#7fbfff;/*検索ボタンの背景カラー*/ 
+border:none;/*検索ボタンの枠線を消す*/ 
+color:#fff;/*検索ボタンのテキストカラー*/ 
+font-weight:bold;/*検索ボタンのテキスト太字*/ 
+font-size:16px;/*検索ボタンのフォントサイズ*/ 
+}
+/*検索ボタンマウスオーバー時*/
+#sbtn:hover{
+color:#666;/*検索ボタンマウスオーバー時のフォントカラー*/ 
+}
+
+.Button-style {
+  font-size: 35px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+.Button-style1{
+  font-size: 35px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #42b7e6;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+
+P.blocktext {
+    margin-left: auto;
+    margin-right: auto;
+    width: 8em
+}
+
+.btn-circle-stitch {
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 5px #FFF;
+  transition: .4s;
+}
+
+.ex1{
+line-height:50px;
+}
+
+.Button-style13 {
+  font-size: 50px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+

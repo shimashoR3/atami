@@ -1,0 +1,30 @@
+/*全体*/
+.wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+    color: #666;
+}
+/* もくじ */
+.page-contents{
+list-style:none; /* 冒頭の数字が不要なので消す */
+padding-left:5px; /* 左側の余白を5pxに調整 */
+}
+.page-contents a{
+text-decoration:none; /* 装飾(下線)を消す */
+}
+
+.add {
+  position: fixed;
+  top: 1rem;
+  right: 1rem;
+  background-color: #fff;
+  color: #0924bd;
+  border: solid 4px #42b7e6;
+  border-radius: 3px;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+.add:active {
+  transform: scale(0.98);
+}

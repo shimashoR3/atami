@@ -1,0 +1,137 @@
+@charset "utf-8";
+
+/*全体*/
+.wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+    color: #666;
+}
+#header {
+    text-align: center;
+    font-size: 100%;
+    width: 100%;
+    margin: 1rem 0 0;
+}
+.btn-circle-stitch {
+     display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 120px;
+  height: 120px;
+  line-height: 120px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 1px #FFF;
+  transition: .4s;
+}
+
+.btn-circle-stitch1{
+  display: inline-block;
+  text-decoration: none;
+  background: #87befd;
+  color: #FFF;
+  width: 50px;
+  height: 50px;
+  line-height: 50px;
+  border-radius: 50%;
+  text-align: center;
+  overflow: hidden;
+  box-shadow: 0px 0px 0px 5px #87befd;
+  border: dashed 1px #FFF;
+  transition: .4s;
+}
+
+/*カレンダー*/
+#calendar {
+    text-align: center;
+    width: 100%;
+}
+table {
+    outline: 2px solid rgb(153, 147, 147);
+    border-collapse: collapse;
+    width: 100%;
+}
+th {
+    color: #000;
+}
+th, td {
+    outline: 1px solid rgb(153, 147, 147);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    text-align: center;
+}
+/*日曜日*/
+td:first-child {
+    color: red;
+}
+/*土曜日*/
+td:last-child {
+    color: blue;
+}
+/*前後月の日付*/
+td.disabled {
+    color: #ccc;
+}
+/*本日*/
+td.today {
+    background-color: #8ad2ee;
+    color: #fff;
+}
+
+/*ボタン*/
+#next-prev-button {
+    position: relative;
+}
+#next-prev-button button{
+    cursor: pointer;
+    background: #42b7e6;
+    color: #fff;
+    border: 1px solid #42b7e6;
+    border-radius: 4px;
+    font-size: 1rem;
+    padding: 0.5rem 2rem;
+    margin: 1rem 0;
+}
+#next-prev-button button:hover{
+    background-color: #42b7e6;
+    border-color: #42b7e6;
+}
+#prev {
+    float: left;
+}
+#next {
+    float: right;
+}
+
+.Button-style {
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #8ad2ee;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+.Button-style1{
+  font-size: 11px;
+  display: inline-block;
+  padding: 0.5em 1em 0.3em;
+  color: #0924bd;
+ border: solid 4px #42b7e6;
+   background-color: #ffffff;
+  cursor: pointer;
+  margin-right: 10px;
+border-radius: 5px;
+}
+p{
+    margin-top:10px;
+}
+
+.ex1{
+line-height:30px;
+}
